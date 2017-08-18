@@ -107,5 +107,31 @@ namespace com.rawprinter
             return (lPrintResult.Where(r => r == false).Count() == 0);
         }
 
+        /// <summary>
+        /// Envia os dados enforma de binário para a impressora.
+        /// </summary>
+        /// <param name="sPrinterName"></param>
+        /// <param name="sStringText"></param>
+        /// <param name="iNumCopies"></param>
+        /// <returns></returns>
+        public static bool SendBytesToPrinter(string sPrinterName, byte[] sStringText, ushort iNumCopies)
+        {
+            // Número de cópias não pode ser 0 ou menor que 0
+            if (iNumCopies <= 0)
+            {
+                MessageBox.Show("Valor para impressão é inválido!", "Imprimir Documento",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            // Declaração de todos os dados de resultado de impressão.
+            List<bool> lPrintResult = new List<bool>();
+            for (ushort i = 0; i < iNumCopies; i++)
+                lPrintResult.Add(RawPrinterHelper.SendBytesToPrinter(sPrinterName, sStringText));
+
+            // Não houve falhas de impressão, então retornará verdadeiro.
+            return (lPrintResult.Where(r => r == false).Count() == 0);
+        }
+
     }
 }

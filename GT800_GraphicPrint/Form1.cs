@@ -46,7 +46,7 @@ namespace GT800_GraphicPrint
                     byte[] bMemdata = new byte[msFile.Length];
                     msFile.Read(bMemdata, 0, bMemdata.Length);
 
-                    RawPrinter.SendString(this.txtGT800.Text, Encoding.ASCII.GetString(bMemdata), 1);
+                    RawPrinter.SendBytesToPrinter(this.txtGT800.Text, bMemdata, 1);
 
                     bwFile.Close();
                     msFile.Close();

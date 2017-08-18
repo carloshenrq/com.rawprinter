@@ -81,6 +81,21 @@ namespace com.rawprinter
         // of bytes, the function sends those bytes to the print queue.
         // Returns true on success, false on failure.
 
+        public static bool SendBytesToPrinter(string szPrinterName, byte[] pBytes)
+        {
+            bool bSuccess = false;
+            IntPtr pUnmanagedBytes = new IntPtr(0);
+            int nLength = pBytes.Length;
+
+            pUnmanagedBytes = Marshal.AllocCoTaskMem(pBytes.Length);
+            Marshal.Copy(pBytes, 0, pUnmanagedBytes, pBytes.Length);
+
+            bSuccess = SendBytesToPrinter(szPrinterName, pUnmanagedBytes, pBytes.Length);
+
+            Marshal.FreeCoTaskMem(pUnmanagedBytes);
+            return bSuccess;
+        }
+
         /// <summary>
         /// Envia bytes para a impressora.
         /// </summary>
