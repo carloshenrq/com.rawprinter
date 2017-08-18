@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "com.rawprinter", "com.rawpr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRawPrinter", "TestRawPrinter\TestRawPrinter.csproj", "{AD850843-9782-4DB1-9872-5899EAE75542}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GT800_GraphicPrint", "GT800_GraphicPrint\GT800_GraphicPrint.csproj", "{C368E49D-3764-473D-9137-16F1A2B5BD02}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{AD850843-9782-4DB1-9872-5899EAE75542}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD850843-9782-4DB1-9872-5899EAE75542}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD850843-9782-4DB1-9872-5899EAE75542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C368E49D-3764-473D-9137-16F1A2B5BD02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C368E49D-3764-473D-9137-16F1A2B5BD02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C368E49D-3764-473D-9137-16F1A2B5BD02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C368E49D-3764-473D-9137-16F1A2B5BD02}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
